@@ -1,0 +1,23 @@
+server:
+  port: 20010
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:28888/eureka/
+spring:
+  application:
+    name: redismq-consumer
+  redis:
+    host: your ip
+    port: 3311
+    database: 66
+    password: hjNVy6oTJNECwg
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1ms
+    timeout: 100ms
